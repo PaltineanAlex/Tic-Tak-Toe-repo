@@ -15,13 +15,12 @@ public class Main{
 
         System.out.print("Name Player 1(X):");
         String p1name = in.nextLine();
-        p1.setName1(p1name);
+        p1.setName(p1name);
 
         System.out.print("Name Player 2(O):");
         String p2name = in.nextLine();
-        p2.setName2(p2name);
+        p2.setName(p2name);
 
-        System.out.println(p1.getName1() + " is the the player to start the game!");
         board.printBoard();
     }
 }
