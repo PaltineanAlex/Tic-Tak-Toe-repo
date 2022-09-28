@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Board{
-    private char[] board = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    private final char[] board = {'1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
     public void printBoard(){
         System.out.println("==============");
@@ -22,7 +22,7 @@ public class Board{
         }
     }
 
-    public void checkWinner(){
+    public boolean isGameDone(){
         String solution = null;
 
         for(int i = 0; i < 8; i++){
@@ -38,9 +38,12 @@ public class Board{
             }
             if(solution.equals("XXX")){
                 System.out.println("Player 1 wins!");
+                return true;
             }else if(solution.equals("OOO")){
                 System.out.println("Player 2 wins!");
+                return true;
             }
         }
+        return false;
     }
 }

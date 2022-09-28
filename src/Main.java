@@ -9,8 +9,8 @@ public class Main{
         System.out.println("=======================================");
         System.out.println();
 
-        Players p1 = new Players();
-        Players p2 = new Players();
+        Player p1 = new Player();
+        Player p2 = new Player();
         Scanner in = new Scanner(System.in);
         Board board = new Board();
 
@@ -25,14 +25,15 @@ public class Main{
         p2.setState(2);
 
         board.printBoard();
-        for(int i=0; i<8; i++){
+        for(int i=0; i<9; i++){
             if(i % 2 == 0){
                 board.turn(p1.getName(), p1.getState());
             }else{
                 board.turn(p2.getName(), p2.getState());
             }
             board.printBoard();
-            board.checkWinner();
+            if(board.isGameDone())
+                break;
             if(i == 7){
                 System.out.println("Draw!");
             }

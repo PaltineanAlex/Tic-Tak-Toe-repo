@@ -1,11 +1,9 @@
-import java.util.Scanner;
-
-public class Players{
+public class Player {
     private String name;
     private int state;
 
 
-    public Players() {
+    public Player() {
     }
 
     public String getName() {
