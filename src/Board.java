@@ -11,14 +11,14 @@ public class Board{
         System.out.println("==============");
     }
 
-    public void turn(String name) {
+    public void turn(String name, int number) {
         System.out.print("It's your turn, " + name + ". Which tile do you choose? ");
         Scanner in = new Scanner(System.in);
-        int i = in.nextInt();
-        if((i-1) % 2 == 0){
-            board[i-1] = 'X';
-        }else{
-            board[i-1] = 'O';
+        int tile = in.nextInt();
+        if(number == 1){
+            board[tile-1] = 'X';
+        }else if(number == 2){
+            board[tile - 1] = 'O';
         }
     }
 
@@ -36,14 +36,11 @@ public class Board{
                 case 6 -> solution = "" + board[0] + board[4] + board[8];
                 case 7 -> solution = "" + board[2] + board[4] + board[6];
             }
-            if(i == 8){
-                System.out.println("Draw!");
+            if(solution.equals("XXX")){
+                System.out.println("Player 1 wins!");
+            }else if(solution.equals("OOO")){
+                System.out.println("Player 2 wins!");
             }
-        }
-        if(solution.equals("XXX")){
-            System.out.println("Player 1 wins!");
-        }else if(solution.equals("OOO")){
-            System.out.println("Player 2 wins!");
         }
     }
 }
