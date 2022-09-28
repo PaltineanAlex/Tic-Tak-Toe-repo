@@ -13,7 +13,6 @@ public class Main{
         Players p2 = new Players();
         Scanner in = new Scanner(System.in);
         Board board = new Board();
-        String text;
 
         System.out.print("Name Player 1(X):");
         String p1name = in.nextLine();
@@ -34,6 +33,9 @@ public class Main{
             }
             board.printBoard();
             board.checkWinner();
+            if(i == 7){
+                System.out.println("Draw!");
+            }
         }
     }
 }
