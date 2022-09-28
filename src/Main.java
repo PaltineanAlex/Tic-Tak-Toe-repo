@@ -34,8 +34,9 @@ public class Main{
             board.printBoard();
             if(board.isGameDone())
                 break;
-            if(i == 7){
+            if(i == 8){
                 System.out.println("Draw!");
+                break;
             }
         }
     }
