@@ -9,6 +9,8 @@
   ## Usage
   
   This game is played in 2. Firstly, you assign a name for each player
+  
+  
   ![image](https://user-images.githubusercontent.com/78145760/192972690-7582f8e4-abc9-4c11-958a-870ae9203392.png)
 
 
